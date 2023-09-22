@@ -5,7 +5,9 @@
     width: 50%vw;
 }
 button{
-    margin: 2px;
+    
+    border: solid;
+    border-color: black;
     color: white;
     background-color: grey;
 }
@@ -13,6 +15,7 @@ button{
 .list{
     color: white;
     margin-right: 300px;
+    font-size: x-large;
 }
 
 input{
@@ -21,11 +24,18 @@ input{
 
 .itemchecks{
     display: flex;
+    
 }
 
 .titleContainer{
     background-color: white;
     border-radius: 10px;
+    border: 2px solid;
     border-color: black;
-    border-width: 10px;
+    font-family: Arial, Helvetica, sans-serif;
 }
+
+button:hover{
+    background-color: green;
+}
+
