@@ -1,0 +1,31 @@
+.mainListContainer{
+    background-color: #419197;
+    border-radius: 5%;
+    height: 75%vh;
+    width: 50%vw;
+}
+button{
+    margin: 2px;
+    color: white;
+    background-color: grey;
+}
+
+.list{
+    color: white;
+    margin-right: 300px;
+}
+
+input{
+    border-radius: 10px;
+}
+
+.itemchecks{
+    display: flex;
+}
+
+.titleContainer{
+    background-color: white;
+    border-radius: 10px;
+    border-color: black;
+    border-width: 10px;
+}
