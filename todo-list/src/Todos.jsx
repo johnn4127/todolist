@@ -39,7 +39,7 @@ const Todos = () => {
   return (
     <div className='titleContainer'>
       <h1>
-        Camping Check List{' '}
+        Adventure Packer{' '}
         <img src={titlecampImage} alt="" style={{maxWidth:'100px', height:'auto'}} />
       </h1>
       <input
@@ -64,7 +64,7 @@ const Todos = () => {
                   ) : (
                     todoItem
                   )}
-                  <input type="checkbox" />
+                 
                 </li>
                 <button onClick={() => handleDelete(index)}>Delete!</button>
                 {selectedIndex === index ? (
