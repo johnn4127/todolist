@@ -42,7 +42,7 @@ const Todos = () => {
         Adventure Packer{' '}
         <img src={titlecampImage} alt="" style={{maxWidth:'100px', height:'auto'}} />
       </h1>
-      <input
+      <input className='inputvalue'
         placeholder='Save Your List'
         value={value}
         onChange={(e) => setValue(e.target.value)}
