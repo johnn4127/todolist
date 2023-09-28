@@ -5,11 +5,16 @@ import titlecampImage from './assets/titlecamp.jpeg';
 const Todos = () => {
   const [value, setValue] = useState('');
   const [todo, setTodo] = useState([]);
-  const [selectedIndex, setSelectedIndex] = useState(-1); 
+  const [selectedIndex, setSelectedIndex] = useState(-1);
+  
+  
   const handleClick = () => {
-    setTodo([...todo, value]);
-    setValue('');
+    if (value.trim() !== '') {
+      setTodo([...todo, value.trim()]);
+      setValue('');
+    }
   };
+  
 
   const handleDelete = (index) => {
     const newList = [...todo];
@@ -40,10 +45,10 @@ const Todos = () => {
     <div className='titleContainer'>
       <h1>
         Adventure Packer{' '}
-        <img src={titlecampImage} alt="" style={{maxWidth:'100px', height:'auto'}} />
+        <img src={titlecampImage} alt="" style={{maxWidth:'100px', height:'auto', marginTop:'20px'}} />
       </h1>
       <input className='inputvalue'
-        placeholder='Save Your List'
+        placeholder='Plan your adventure'
         value={value}
         onChange={(e) => setValue(e.target.value)}
       />
