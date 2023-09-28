@@ -5,11 +5,16 @@ import titlecampImage from './assets/titlecamp.jpeg';
 const Todos = () => {
   const [value, setValue] = useState('');
   const [todo, setTodo] = useState([]);
-  const [selectedIndex, setSelectedIndex] = useState(-1); 
+  const [selectedIndex, setSelectedIndex] = useState(-1);
+  
+  
   const handleClick = () => {
-    setTodo([...todo, value]);
-    setValue('');
+    if (value.trim() !== '') {
+      setTodo([...todo, value.trim()]);
+      setValue('');
+    }
   };
+  
 
   const handleDelete = (index) => {
     const newList = [...todo];
@@ -39,11 +44,11 @@ const Todos = () => {
   return (
     <div className='titleContainer'>
       <h1>
-        Camping Check List{' '}
-        <img src={titlecampImage} alt="" style={{maxWidth:'100px', height:'auto'}} />
+        Adventure Packer{' '}
+        <img src={titlecampImage} alt="" style={{maxWidth:'100px', height:'auto', marginTop:'20px'}} />
       </h1>
-      <input
-        placeholder='Save Your List'
+      <input className='inputvalue'
+        placeholder='Plan your adventure'
         value={value}
         onChange={(e) => setValue(e.target.value)}
       />
@@ -64,7 +69,7 @@ const Todos = () => {
                   ) : (
                     todoItem
                   )}
-                  <input type="checkbox" />
+                 
                 </li>
                 <button onClick={() => handleDelete(index)}>Delete!</button>
                 {selectedIndex === index ? (
